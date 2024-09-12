@@ -10,7 +10,7 @@ S = 1.25
 
 # Stress intensity factor
 K, a, sigma, K_IC = sp.symbols('K a sigma K_IC')
-K = sigma * S * sp.sqrt(sp.pi * a)
+K = sigma / S * sp.sqrt(sp.pi * a)
 
 # Solve for crack length
 eq = K - K_IC
